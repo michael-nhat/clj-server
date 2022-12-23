@@ -10,7 +10,10 @@
     "test": "echo \"Error: no test specified\" && exit 1", 
     "xadd": "neil add dep :lib",
     "xinstall": "clj  -X:deps mvn-install",
-    "start": "clj -X:start"
+    "start": "clj -X:start",
+    "xupgrade": "neil dep upgrade :lib",
+    "xupgrade-all": "neil dep upgrade :lib"
+    
   },
   "keywords": [],
   "author": "",
