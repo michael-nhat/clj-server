@@ -1,5 +1,8 @@
 {:paths ["src"]
- :deps  {clj-kondo/clj-kondo {:mvn/version "2022.12.10"}}
+ :deps  {io.pedestal/pedestal.service {:mvn/version "0.5.7"}
+  io.pedestal/pedestal.route   {:mvn/version "0.5.7"}
+  io.pedestal/pedestal.jetty   {:mvn/version "0.5.7"}
+  org.slf4j/slf4j-simple       {:mvn/version "1.7.28"}
  :aliases
  {:neil {:project {:name pedestal-hello1/pedestal-hello1}}
 
