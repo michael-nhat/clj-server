@@ -1,8 +1,12 @@
 {:paths ["src"]
- :deps  {io.pedestal/pedestal.service {:mvn/version "0.5.11-beta-1"}
-  io.pedestal/pedestal.route   {:mvn/version "0.5.7"}
-  io.pedestal/pedestal.jetty   {:mvn/version "0.5.7"}
-  org.slf4j/slf4j-simple       {:mvn/version "1.7.28"}}
+ :deps  
+ {
+  org.clojure/clojure {:mvn/version "1.11.1"}
+  io.pedestal/pedestal.service {:mvn/version "0.5.11-beta-1"}
+  io.pedestal/pedestal.route   {:mvn/version "0.5.11-beta-1"}
+  io.pedestal/pedestal.jetty   {:mvn/version "0.5.11-beta-1"}
+  org.slf4j/slf4j-simple       {:mvn/version "1.7.28"}
+         }
  :aliases
  {:neil {:project {:name pedestal-hello1/pedestal-hello1}}
 
