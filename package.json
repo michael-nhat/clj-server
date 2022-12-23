@@ -9,7 +9,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1", 
     "xadd": "neil add dep :lib",
-    "xinstall": "clj  -X:deps mvn-install"
+    "xinstall": "clj  -X:deps mvn-install",
+    "start": "clj -X:start"
   },
   "keywords": [],
   "author": "",

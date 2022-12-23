@@ -1,7 +1,7 @@
 ##### Todo
     - pedestal example
     - repl workflow
-    
+
 
 ##### Done
     - clj -X:start
