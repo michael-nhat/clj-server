@@ -12,6 +12,7 @@
     "xi": "clj  -X:deps mvn-install",
     "start": "clj -X:start",
     "xu": "neil dep upgrade :lib",
+    "xii": "clj -P",
     "xu-all": "neil dep upgrade :lib"
     
   },

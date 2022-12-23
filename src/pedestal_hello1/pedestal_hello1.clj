@@ -11,7 +11,10 @@
    #{["/greet" :get respond-hello :route-name :greet]}))
 
 
+(defn repl [])
+
 (defn -main
   "Invoke me with clojure -M -m pedestal-hello1.pedestal-hello1"
   [& args]
+  (repl)
   (println "-main with" args))
