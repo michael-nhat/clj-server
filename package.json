@@ -10,7 +10,8 @@
     "test": "echo \"Error: no test specified\" && exit 1", 
     "xa": "neil add dep :lib",
     "xi": "clj  -X:deps mvn-install",
-    "start": "clj -X:start",
+    "s": "clj -X:start",
+    "s-a": "clj -M:start",
     "xu": "neil dep upgrade :lib",
     "xii": "clj -P",
     "xu-all": "neil dep upgrade :lib"
