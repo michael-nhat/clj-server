@@ -5,18 +5,17 @@
             [rebel-readline.main :as rebel]))
 ;; (pedestal-hello1.pedestal-hello1/-main)
 
-(defn greeting-fn []  
+(defn greeting-fn []
   (print "wtf, gretting")
-  (ns pedestal-hello1.pedestal-hello1)
-  )
+  (ns pedestal-hello1.pedestal-hello1))
 
 (defn -main [& arg]
 ;;   (nrepl-server/start-server :port 7889 :handler cider-nrepl-handler)
-  (println "nrepl server at port 7889")
+  (ns pedestal-hello1.pedestal-hello1)
   (nrepl-server/start-server :port 7886 :handler cider-nrepl-handler :greeting-fn greeting-fn)
   (pedestal-hello1.pedestal-hello1/-main)
-(ns pedestal-hello1.pedestal-hello1)
+  (println "my nrepl server ")
   (rebel/-main)
-  ;; (System/exit 0)
+  (System/exit 0)
   )
 
