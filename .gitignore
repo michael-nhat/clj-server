@@ -19,3 +19,4 @@ logs/
 .clj-kondo/
 .lein-repl-history
 .nrepl-port
+.rebel_readline_history

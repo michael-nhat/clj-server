@@ -5,8 +5,8 @@
    [nrepl.server :as nrepl-server]
    [cider.nrepl :refer (cider-nrepl-handler)]))
 
-(defonce nrepl-server (nrepl-server/start-server :port 7888 :handler cider-nrepl-handler))
-(spit "./.nrepl-port" (:port nrepl-server))
+;; (defonce nrepl-server (nrepl-server/start-server :port 7888 :handler cider-nrepl-handler))
+;; (spit "./.nrepl-port" (:port nrepl-server))
 
 (defn respond-hello [request]
   {:status 200 :body "Hello, world!"})
