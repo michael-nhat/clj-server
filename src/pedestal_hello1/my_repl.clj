@@ -1,19 +1,32 @@
 (ns pedestal-hello1.my-repl
-  (:require [pedestal-hello1.pedestal-hello1]
+  (:refer-clojure :exclude [send])
+  (:require [cider.nrepl :refer [cider-nrepl-handler]]
+            [nrepl.core :as nrepl]
             [nrepl.server :as nrepl-server]
-            [cider.nrepl :refer [cider-nrepl-handler]]
+            [nrepl.transport :as transport]
+            [pedestal-hello1.pedestal-hello1] ;; [nrepl.transport :refer [send]]
             [rebel-readline.main :as rebel]))
 ;; (pedestal-hello1.pedestal-hello1/-main)
 
-(defn greeting-fn []
-  (print "wtf, gretting")
-  (ns pedestal-hello1.pedestal-hello1))
+(def conn)
 
-(defn -main [& arg]
+(defn greeting-fn [t]
+  (print "wtf, gretting")
+  ;; (ns pedestal-hello1.pedestal-hello1)
+  (transport/send t {:op "eval" :code "(ns 'pedestal-hello1.pedestal-hello1)"})
+  (transport/send t {:op "eval" :code "(def conn 3)" :ns "pedestal-hello1.pedestal-hello1"} )
+  (transport/send t {:out (str ";; nREPL " "wtf anh nhat oi")})
+  ;; (nrepl/message t {:out "(+ 2 3)"})
+  ;; (require 'pedestal-hello1.pedestal-hello1)
+  
+  )
+
+
+(defn -main [& _]
 ;;   (nrepl-server/start-server :port 7889 :handler cider-nrepl-handler)
-  (ns pedestal-hello1.pedestal-hello1)
-  (nrepl-server/start-server :port 7886 :handler cider-nrepl-handler :greeting-fn greeting-fn)
+  (nrepl-server/start-server :port 7885 :handler cider-nrepl-handler :greeting-fn greeting-fn)
   (pedestal-hello1.pedestal-hello1/-main)
+  (ns pedestal-hello1.pedestal-hello1)
   (println "my nrepl server ")
   (rebel/-main)
   (System/exit 0)
